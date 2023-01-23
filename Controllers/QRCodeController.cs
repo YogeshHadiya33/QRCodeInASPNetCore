@@ -28,7 +28,7 @@ namespace QRCodeInASPNetCore.Controllers
                 case 1: // website url
                     payload = new Url(model.WebsiteURL);
                     break;
-                case 2: // bookmar url
+                case 2: // bookmark url
                     payload = new Bookmark(model.BookmarkURL, model.BookmarkURL);
                     break;
                 case 3: // compose sms
@@ -51,7 +51,7 @@ namespace QRCodeInASPNetCore.Controllers
             QRCode qrCode = new QRCode(qrCodeData);
             var qrCodeAsBitmap = qrCode.GetGraphic(20);
 
-            // use this when you want to show your logo in middle of QR Code
+            // use this when you want to show your logo in middle of QR Code and change color of qr code
             //Bitmap logoImage = new Bitmap(@"wwwroot/img/Virat-Kohli.jpg");
             //var qrCodeAsBitmap = qrCode.GetGraphic(20, Color.Black, Color.Red, logoImage);
 
